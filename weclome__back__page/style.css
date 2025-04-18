@@ -1,0 +1,286 @@
+body {
+    overflow-x: hidden;
+}
+
+:root {
+    --font-primary: 'Inter', sans;
+
+    --main-color: #3282b8;
+    --main-color-hover: #296b98;
+    --main-color-transparent: rgba(50, 130, 184, 0.28);
+
+
+    --second-color: #439ad5;
+
+
+    --text-main-color: #ffffff;
+    --text-secondary-color: #5193c3;
+}
+
+header  {
+    width: 100%;
+    height: 8vh;
+    position: absolute;
+    padding: 5px;
+    top: 0;
+    left: 0;
+    background: var(--main-color);
+    display: flex;
+    align-items: center;
+    z-index: 1;
+
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.img{
+    width: 5.5vh;
+    height: 5.5vh;
+    background: #fff;
+    border-radius: 15px;
+    margin-left: 20px;
+    line-height: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-primary);
+
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 1.5em;
+    color: var(--main-color);
+}
+
+.logo p {
+    font-family: var(--font-primary);
+    color: var(--text-main-color);
+    font-size: 18px;
+    line-height: 0.5;
+    margin-left: 1em;
+}
+
+.right__block {
+    text-align: right;
+    position: absolute;
+    right: 3em;
+}
+
+.settings {
+    display: flex;
+    align-items: center;
+}
+
+.settings a {
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+.settings a button {
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+    margin: 2px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.settings a button i {
+    font-size: 21.5px;
+    color: var(--main-color);
+}
+
+.year {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: var(--font-primary);
+    padding: 0;
+    border: solid 1px #fff;
+    border-radius: 10px;
+}
+
+headblock {
+    width: 100%;
+    height: 5vh;
+    position: absolute;
+    padding: 5px;
+    top: 5.3em;
+    left: 0;
+    background: var(--second-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+}
+
+headblock ul {
+    display: flex;
+}
+
+headblock ul a li {
+    list-style: none;
+    padding: 2vh;
+    transition: .3s;
+}
+
+headblock ul a li:hover {
+    background: var(--main-color);
+}
+
+headblock ul a {
+    text-decoration: none;
+    color: var(--text-main-color);
+    font-family: var(--font-primary);
+}
+
+nav__panel {
+    width: 100%;
+    height: 20%;
+    background: #000;
+}
+
+
+
+.leave__account {
+    position: absolute;
+    right: 2em;
+    bottom: 2em;
+}
+
+.leave__account a button {
+    border: solid 2px red;
+    border-radius: 15px;
+    padding: 13px;
+    background: rgba(255, 0, 0, 0.34);
+    cursor: pointer;
+}
+
+.leave__account a button i {
+    font-size: 24px;
+    color: red;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+}
+
+.welcome__block {
+    font-family: var(--font-primary);
+    color: var(--main-color);
+    transform: translate(35%, 500%);
+    font-size: 2em;
+}
+
+modal {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.exit {
+    font-family: var(--font-primary);
+    position: absolute;
+    background: transparent;
+    border: solid 2px rgba(96, 153, 209, 0.51);
+    background: transparent;
+    border-radius: 25px;
+    padding: 30px;
+    color: #ff0000;
+    display: none;
+    transition: all 1s;
+    margin-top: 50%;
+}
+
+.exit h1 {
+    margin: 60px;
+}
+
+.exit button {
+    width: 100%;
+    display: inline;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-family: var(--font-primary);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.to__exit {
+    background: rgba(225, 159, 159, 0.45);
+    color: rgba(255, 0, 0, 0.7);
+    font-weight: 600;
+    font-size: 15px;
+    border: solid 2px rgba(255, 0, 0, 0.45);
+}
+
+.to__exit:hover {
+    background: rgb(255, 0, 0);
+    color: #ffffff;
+}
+
+.return {
+    background: var(--main-color-transparent);
+    color: var(--main-color);
+    font-weight: 600;
+    font-size: 15px;
+    border: solid 2px var(--main-color);
+}
+
+.return:hover {
+    background: var(--main-color);
+    color: white;
+}
+
+.modal_active {
+    display: inline;
+    animation: fadeIn .5s;
+}
+
+.modal_disable {
+    display: none;
+    animation: fadeOut .5s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@media screen and (max-width: 970px) {
+
+    headblock {
+        display: flex;
+        height: 100%;
+        position: fixed;
+        align-items: normal;
+
+    }
+    headblock ul {
+        display: block;
+        width: 90%;
+        padding: 0;
+    }
+    headblock ul a li {
+        border-radius: 10px;
+    }
+    
+}
+@media screen and (max-width: 560px) {
+
+}

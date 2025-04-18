@@ -1,0 +1,393 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Unbounded:wght@200..900&display=swap");
+:root {
+  --custom-theme: rgba(63, 128, 221, 0.99);
+  --custom-theme--transparent: color-mix(in srgb, var(--custom-theme) 30%, transparent);
+}
+
+[data-theme=custom] {
+  --main--background: #1e1e20;
+  --main--button: #1c1c1e;
+  --main--text: #aaaaaa;
+  --main--color: #ffffff;
+  --main--tag--a: #ffffff;
+  --main--border: #313133;
+  --main--border-focus: #424245;
+  --selection--bg: #171719;
+  --selection--color: #a1a1a1;
+  --button-background: #ffffff;
+  --button-text: #404042;
+  --icon: #2a2a2c;
+  --info--color: #6a6a6c;
+  --main--font: "Manrope", sans-serif;
+  --second--font: "Inter", sans-serif;
+  --third--font: "Unbounded", sans-serif;
+  --status: #63a551;
+}
+
+[data-theme=dark] {
+  --main--background: #1e1e20;
+  --main--button: #1c1c1e;
+  --main--text: #aaaaaa;
+  --main--color: #ffffff;
+  --main--tag--a: #ffffff;
+  --main--border: #313133;
+  --main--border-focus: #424245;
+  --selection--bg: #171719;
+  --selection--color: #a1a1a1;
+  --button-background: #ffffff;
+  --button-text: #404042;
+  --icon: #2a2a2c;
+  --info--color: #6a6a6c;
+  --main--font: "Manrope", sans-serif;
+  --second--font: "Inter", sans-serif;
+  --status: #63a551;
+}
+
+[data-theme=light] {
+  --main--background: #dddddd;
+  --main--button: #a1a1a1;
+  --main--text: #232323;
+  --main--color: #434343;
+  --main--tag--a: #000000;
+  --main--border: #bcbcbc;
+  --main--border-focus: #9e9e9e;
+  --selection--bg: #e6e6e6;
+  --selection--color: #d4d4d4;
+  --button-background: #ffffff;
+  --button-text: #404042;
+  --icon: #a5a5a5;
+  --info--color: #6a6a6c;
+  --main--font: "Manrope", sans-serif;
+  --second--font: "Inter", sans-serif;
+  --third--font: "Unbounded", sans-serif;
+  --status: #1c8c02;
+}
+
+.nav-panel {
+  width: 15em;
+  height: 100%;
+  background: var(--main--border);
+  border-radius: 20px;
+  padding: 10px;
+}
+.nav-panel .logo {
+  background-size: contain;
+  background: none;
+  width: 100%;
+  margin-left: 5px;
+}
+.nav-panel .logo img {
+  width: 230px;
+  background: none;
+}
+.nav-panel a {
+  text-decoration: none;
+  color: var(--main--text);
+  font-family: var(--main--font), serif;
+  font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 15px;
+  background: var(--main--border);
+  border-radius: 20px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  margin-top: 5px;
+}
+.nav-panel a li {
+  list-style: none;
+  background: none;
+  margin-left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.nav-panel a li i {
+  background: none;
+  font-size: 21px;
+  margin-right: 10px;
+}
+.nav-panel a:hover {
+  background: var(--main--background);
+}
+
+.line {
+  margin: 20px 0;
+  padding: 0;
+  height: 0;
+  border: none;
+  border-top: 2px solid var(--main--border-focus);
+}
+
+*, body {
+  margin: 0;
+  padding: 0;
+  background: var(--main--background);
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.page {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateY(8%);
+          transform: translateY(8%);
+}
+.page .diary {
+  background: var(--main--border);
+  width: 80%;
+  height: 47.5em;
+  margin-left: 20px;
+  border-radius: 20px;
+  padding: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 20px 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  overflow-y: scroll;
+}
+.page .diary::-webkit-scrollbar {
+  width: 0;
+  background: none;
+}
+.page .diary h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: var(--icon);
+  padding: 15px;
+  border-radius: 15px;
+  width: 7em;
+  height: 1em;
+  color: var(--main--text);
+  font-family: var(--main--font), serif;
+  font-size: 20px;
+  cursor: pointer;
+}
+.page .diary h1 i {
+  background: none;
+  margin-right: 10px;
+}
+
+.left--side {
+  background: none;
+}
+
+.main--information {
+  width: 196%;
+  max-height: 70%;
+  background: var(--icon);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 15px;
+}
+.main--information .rightUI {
+  width: 150%;
+  background: none;
+}
+.main--information .rightUI .status {
+  background: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: var(--status);
+  margin-top: 20px;
+}
+.main--information .rightUI .status i {
+  font-size: 20px;
+  margin-right: 5px;
+  background: none;
+}
+.main--information .rightUI .status .userStatus {
+  font-family: var(--main--font), serif;
+  font-weight: 700;
+  background: none;
+  vertical-align: -4px;
+}
+.main--information .rightUI .userBio {
+  background: none;
+  width: 58%;
+}
+.main--information .rightUI .userBio p {
+  padding: 20px;
+  background: var(--main--border);
+  border-radius: 15px;
+  font-family: var(--main--font), serif;
+  font-weight: 500;
+  font-size: 17px;
+  color: var(--custom-theme);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.main--information .rightUI .userBio p:hover {
+  background: var(--main--background);
+  cursor: pointer;
+}
+.main--information .rightUI .__userFIO {
+  background: none;
+  font-family: var(--main--font), serif;
+  color: var(--main--text);
+  font-weight: 600;
+  font-size: 40px;
+  margin-top: 30px;
+  cursor: default;
+}
+.main--information .rightUI .userGrade {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: none;
+}
+.main--information .rightUI .userGrade .typeOfUser, .main--information .rightUI .userGrade .grade {
+  background: none;
+  font-family: var(--main--font), serif;
+  color: var(--main--text);
+  font-weight: 700;
+  font-size: 23px;
+  margin-top: 10px;
+}
+.main--information .rightUI .userGrade hr {
+  margin: 15px 13px;
+  padding: 0;
+  height: 20px;
+}
+.main--information .leftUI {
+  width: 50%;
+  background: none;
+}
+.main--information .leftUI img {
+  width: 20em;
+  height: 30em;
+  background: var(--custom-theme);
+  border-radius: 30px;
+  border: none;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main--information .leftUI .profile--icons {
+  width: 20em;
+  background: none;
+}
+.main--information .leftUI .profile--icons a {
+  text-decoration: none;
+  background: none;
+}
+.main--information .leftUI .profile--icons button {
+  margin-top: 5px;
+  width: 24%;
+  height: 3em;
+  border: none;
+  border-radius: 10px;
+  background: var(--main--border);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.main--information .leftUI .profile--icons button i {
+  color: var(--custom-theme);
+  background: none;
+  font-size: 18px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.main--information .leftUI .profile--icons button:hover {
+  background: var(--custom-theme);
+  cursor: pointer;
+}
+.main--information .leftUI .profile--icons button:hover i {
+  color: var(--text-main-color);
+}
+
+.block {
+  width: 196%;
+  background: var(--icon);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  font-family: var(--main--font), serif;
+}
+.block .infoText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: var(--main--border);
+  padding: 15px;
+  border-radius: 15px;
+  max-width: 8em;
+  height: 1em;
+  color: var(--main--text);
+  font-family: var(--main--font), serif;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.block .infoText i {
+  background: none;
+  font-size: 24px;
+  margin-right: 10px;
+}
+.block p {
+  background: none;
+  font-size: 20px;
+}
+.block .address {
+  background: none;
+}
+.block .info {
+  background: none;
+  color: var(--main--text);
+  font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 15px 10px;
+}
+.block a {
+  background: none;
+  color: var(--custom-theme);
+  margin-left: 10px;
+  font-size: 18px;
+}
+.block .studentParents .infoText {
+  width: 6em;
+}

@@ -1,0 +1,312 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Unbounded:wght@200..900&display=swap");
+:root {
+  --custom-theme: rgba(63, 128, 221, 0.99);
+  --custom-theme--transparent: color-mix(in srgb, var(--custom-theme) 30%, transparent);
+}
+
+[data-theme=custom] {
+  --main--background: #1e1e20;
+  --main--button: #1c1c1e;
+  --main--text: #aaaaaa;
+  --main--color: #ffffff;
+  --main--tag--a: #ffffff;
+  --main--border: #313133;
+  --main--border-focus: #424245;
+  --selection--bg: #171719;
+  --selection--color: #a1a1a1;
+  --button-background: #ffffff;
+  --button-text: #404042;
+  --icon: #2a2a2c;
+  --info--color: #6a6a6c;
+  --main--font: "Manrope", sans-serif;
+  --second--font: "Inter", sans-serif;
+  --third--font: "Unbounded", sans-serif;
+  --status: #63a551;
+}
+
+[data-theme=dark] {
+  --main--background: #1e1e20;
+  --main--button: #1c1c1e;
+  --main--text: #aaaaaa;
+  --main--color: #ffffff;
+  --main--tag--a: #ffffff;
+  --main--border: #313133;
+  --main--border-focus: #424245;
+  --selection--bg: #171719;
+  --selection--color: #a1a1a1;
+  --button-background: #ffffff;
+  --button-text: #404042;
+  --icon: #2a2a2c;
+  --info--color: #6a6a6c;
+  --main--font: "Manrope", sans-serif;
+  --second--font: "Inter", sans-serif;
+  --status: #63a551;
+}
+
+[data-theme=light] {
+  --main--background: #dddddd;
+  --main--button: #a1a1a1;
+  --main--text: #232323;
+  --main--color: #434343;
+  --main--tag--a: #000000;
+  --main--border: #bcbcbc;
+  --main--border-focus: #9e9e9e;
+  --selection--bg: #e6e6e6;
+  --selection--color: #d4d4d4;
+  --button-background: #ffffff;
+  --button-text: #404042;
+  --icon: #a5a5a5;
+  --info--color: #6a6a6c;
+  --main--font: "Manrope", sans-serif;
+  --second--font: "Inter", sans-serif;
+  --third--font: "Unbounded", sans-serif;
+  --status: #1c8c02;
+}
+
+.nav-panel {
+  width: 15em;
+  height: 100%;
+  background: var(--main--border);
+  border-radius: 20px;
+  padding: 10px;
+}
+.nav-panel .logo {
+  background-size: contain;
+  background: none;
+  width: 100%;
+  margin-left: 5px;
+}
+.nav-panel .logo img {
+  width: 230px;
+  background: none;
+}
+.nav-panel a {
+  text-decoration: none;
+  color: var(--main--text);
+  font-family: var(--main--font), serif;
+  font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 15px;
+  background: var(--main--border);
+  border-radius: 20px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  margin-top: 5px;
+}
+.nav-panel a li {
+  list-style: none;
+  background: none;
+  margin-left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.nav-panel a li i {
+  background: none;
+  font-size: 21px;
+  margin-right: 10px;
+}
+.nav-panel a:hover {
+  background: var(--main--background);
+}
+
+.line {
+  margin: 20px 0;
+  padding: 0;
+  height: 0;
+  border: none;
+  border-top: 2px solid var(--main--border-focus);
+}
+
+*, body {
+  margin: 0;
+  padding: 0;
+  background: var(--main--background);
+}
+
+.page {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateY(8%);
+          transform: translateY(8%);
+}
+.page .diary {
+  background: var(--main--border);
+  width: 80%;
+  height: 47.5em;
+  margin-left: 20px;
+  border-radius: 20px;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow-y: scroll;
+}
+.page .diary::-webkit-scrollbar {
+  width: 0;
+  background: none;
+}
+.page .diary h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: var(--icon);
+  padding: 15px;
+  border-radius: 15px;
+  width: 7.5em;
+  height: 1em;
+  color: var(--main--text);
+  font-family: var(--main--font), serif;
+  font-size: 20px;
+  cursor: pointer;
+}
+.page .diary h1 i {
+  background: none;
+  margin-right: 10px;
+}
+.page .diary .month {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: var(--icon);
+  padding: 15px;
+  border-radius: 15px;
+  width: 5em;
+  height: 1em;
+  color: var(--main--text);
+  font-family: var(--main--font), serif;
+  font-size: 20px;
+  cursor: pointer;
+}
+.page .diary .block {
+  background: var(--main--background);
+  width: 98.5%;
+  height: 97%;
+  border-radius: 15px;
+  padding: 10px;
+  text-decoration: none;
+  overflow: hidden;
+}
+.page .diary .block .columns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 15px;
+}
+.page .diary .block .columns .date:nth-child(7),
+.page .diary .block .columns .date:nth-child(6) {
+  background: var(--custom-theme--transparent);
+}
+.page .diary .block .columns .date:nth-child(7):hover,
+.page .diary .block .columns .date:nth-child(6):hover {
+  background: var(--custom-theme);
+}
+.page .diary .block .columns .date:nth-child(7):hover p,
+.page .diary .block .columns .date:nth-child(6):hover p {
+  color: var(--main--text);
+}
+.page .diary .block .columns .column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.page .diary .block .columns .calendar .day {
+  padding: 15px;
+  background: var(--main--border);
+  width: 165px;
+  height: 15px;
+  border-radius: 15px;
+  margin: 20px 20px 2px 0px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.page .diary .block .columns .calendar p {
+  background: none;
+  font-family: var(--main--font), serif;
+  font-weight: 700;
+  font-size: 19px;
+  color: var(--custom-theme);
+}
+.page .diary .block .date {
+  padding: 15px;
+  background: var(--main--border);
+  width: 165px;
+  height: 65px;
+  border-radius: 15px;
+  margin: 20px 20px 2px 0px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.page .diary .block .date:hover {
+  background: var(--main--border-focus);
+  cursor: pointer;
+}
+.page .diary .block .date p {
+  background: none;
+  font-family: var(--main--font), serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--custom-theme);
+  margin-left: 7px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.text {
+  background: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.text h1:nth-child(2) {
+  margin-left: 10px;
+  width: 4.5em;
+}

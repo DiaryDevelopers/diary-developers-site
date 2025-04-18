@@ -1,0 +1,288 @@
+
+@import '../../_main.scss';
+
+*, body {
+  margin: 0;
+  padding: 0;
+  background: var(--main--background);
+  transition: .8s;
+}
+
+.page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(8%);
+
+    .diary {
+      background: var(--main--border);
+      width: 80%;
+      height: 47.5em;
+      margin-left: 20px;
+      border-radius: 20px;
+      padding: 20px;
+      display: -ms-grid;
+      display: grid;
+      -ms-grid-columns: 1fr 20px 1fr;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+          width: 0;
+          background: none;
+        }
+
+        h1 {
+          display: flex;
+          justify-items: center;
+          align-items: center;
+          background: var(--icon);
+          padding: 15px;
+          border-radius: 15px;
+          width: 7em;
+          height: 1em;
+          color: var(--main--text);
+          font-family: var(--main--font), serif;
+          font-size: 20px;
+          cursor: pointer;
+
+
+          i {
+            background: none;
+            margin-right: 10px;
+          }
+
+        }
+
+    }
+
+
+
+
+            }
+
+.left--side {
+  background: none;
+}
+
+.main--information {
+  width: 196%;
+  max-height: 70%;
+  background: var(--icon);
+  display: flex;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 15px;
+
+      .rightUI {
+        width: 150%;
+        background: none;
+
+            .status {
+              background: none;
+              display: flex;
+              color: var(--status);
+              margin-top: 20px;
+
+                i {
+                  font-size: 20px;
+                  margin-right: 5px;
+                  background: none;
+                }
+
+              .userStatus {
+                font-family: var(--main--font), serif;
+                font-weight: 700;
+                background: none;
+                vertical-align: -4px;
+              }
+
+            }
+
+            .userBio {
+              background: none;
+              width: 58%;
+
+               p {
+                 padding: 20px;
+                 background: var(--main--border);
+                 border-radius: 15px;
+                 font-family: var(--main--font), serif;
+                 font-weight: 500;
+                 font-size: 17px;
+                 color: $main--bg;
+                 transition: .2s;
+
+                  &:hover {
+                    background: var(--main--background);
+                    cursor: pointer;
+                  }
+
+               }
+
+            }
+
+            .__userFIO {
+              background: none;
+              font-family: var(--main--font), serif;
+              color: var(--main--text);
+              font-weight: 600;
+              font-size: 40px;
+              margin-top: 30px;
+              cursor: default;
+            }
+
+            .userGrade {
+              display: flex;
+              background: none;
+
+                .typeOfUser, .grade {
+                  background: none;
+                  font-family: var(--main--font), serif;
+                  color: var(--main--text);
+                  font-weight: 700;
+                  font-size: 23px;
+                  margin-top: 10px;
+                }
+
+              hr {
+                margin: 15px 13px;
+                padding: 0;
+                height: 20px;
+              }
+
+              }
+
+
+      }
+
+      .leftUI {
+          width: 50%;
+          background: none;
+
+          img {
+            width: 20em;
+            height: 30em;
+            background: $main--bg;
+            border-radius: 30px;
+            border: none;
+            object-fit: cover;
+          }
+
+        .profile--icons {
+          width: 20em;
+          background: none;
+
+            a {
+              text-decoration: none;
+              background: none;
+            }
+
+            button {
+              margin-top: 5px;
+              width: 24%;
+              height: 3em;
+              border: none;
+              border-radius: 10px;
+              background: var(--main--border);
+              transition: .2s;
+
+                i {
+                  color: $main--bg;
+                  background: none;
+                  font-size: 18px;
+                  transition: .2s;
+                }
+
+              &:hover {
+                background: $main--bg;
+                cursor: pointer;
+
+                  i {
+                    color: var(--text-main-color);
+                  }
+
+              }
+
+            }
+
+        }
+
+      }
+
+  }
+
+.block {
+  width: 196%;
+  background: var(--icon);
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  font-family: var(--main--font), serif;
+
+  .infoText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--main--border);
+    padding: 15px;
+    border-radius: 15px;
+    max-width: 8em;
+    height: 1em;
+    color: var(--main--text);
+    font-family: var(--main--font), serif;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 700;
+    margin-bottom: 10px;
+
+      i {
+        background: none;
+        font-size: 24px;
+        margin-right: 10px;
+      }
+
+  }
+
+  p {
+    background: none;
+    font-size: 20px;
+  }
+
+  .address {
+    background: none;
+  }
+
+  .info {
+    background: none;
+    color: var(--main--text);
+    font-weight: 500;
+    display: flex;
+    margin: 15px 10px;
+  }
+
+  a {
+    background: none;
+    color: $main--bg;
+    margin-left: 10px;
+    font-size: 18px;
+  }
+
+  .studentParents {
+    .infoText {
+      width: 6em;
+    }
+  }
+
+
+}
+
+
+
+
+

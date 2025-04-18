@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/font--connector.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./style.css">
+    <title>Электронный дневник</title>
+</head>
+<body class="light">
+    <header>
+
+            <div class="logo">
+                <a href=""><div class="img">D</div></span></a>
+                <div class="text__logo">
+                    <p>Сетевой город. Образование</p>
+                    <p>МАОУ СОШ 104</p>
+                </div>
+            </div>
+
+            <div class="right__block">
+                <div class="settings">
+                    <a href=""><button id="proflie"><i class='bx bxs-user'></i></button></a>
+                    <a href=""><button id="themeToggle"><i class='bx bxs-adjust-alt' ></i></button></a>
+                    <a href=""><button id="chats"><i class='bx bxs-message-square-dots' ></i></button></a>
+                    <a href=""><button id="settings"><i class='bx bxs-cog' ></i></button></a>
+                </div>
+                <div class="year">
+                    <p>2024 - 2025 год</p>
+                </div>
+            </div>
+
+    </header>
+
+    <headblock>
+        <ul>
+            <a href="/"><li>Главная</li></a>
+            <a href="/"><li>Информация</li></a>
+            <a href="/"><li>Расписание</li></a>
+            <a href="/"><li>Отчёты</li></a>
+            <a href="/"><li>Обучение</li></a>
+            <a href="/"><li>Внеурочная деятельность</li></a>
+            <a href="/"><li>Ресурсы</li></a>
+        </ul>
+    </headblock>
+
+    <main>
+        <div class="leave__account">
+            <a href="#">
+                <button onclick="toggleModal()"><i class='bx bx-log-out-circle' ></i></button>
+            </a>
+        </div>
+
+    </main>
+
+    <bottom>
+
+    </bottom>
+
+
+    <modal>
+        <div class="exit" id="modal__window" onclick="toggleModal()">
+            <h1>Вы уверены, что хотите выйти?</h1>
+            <button class="to__exit" id="logout-user">Да, выйти</button>
+            <button class="return">Нет, остаться</button>
+        </div>
+    </modal>
+
+    <script src="scripts/theme__toggle.js"></script>
+    <script src="scripts/log_out__modal.js"></script>
+
+</body>
+</html>

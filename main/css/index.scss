@@ -1,0 +1,85 @@
+
+@import '../../_main.scss';
+
+
+*, body {
+  margin: 0;
+  padding: 0;
+  background: var(--main--background);
+}
+
+.page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(8%);
+
+  .diary {
+    background: var(--main--border);
+    width: 80%;
+    height: 47.5em;
+    margin-left: 20px;
+    border-radius: 20px;
+    padding: 20px;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      width: 0;
+      background: none;
+    }
+
+    a {
+
+      background: var(--main--background);
+      width: 46em;
+      height: 21.5em;
+      border-radius: 15px;
+      padding: 10px;
+      text-decoration: none;
+      overflow: hidden;
+
+      &:hover {
+        background: var(--main--button);
+
+        .block i {
+          color: $main--bg;
+        }
+
+      }
+
+      .block {
+        background: none;
+
+        i {
+          color: $main--bg-transparent;
+          background: none;
+          text-decoration: none;
+          font-size: 560px;
+          margin-left: 1em;
+          transform: translateY(-220px) rotate(-15deg) translateX(-60%);
+          transition: .3s;
+        }
+
+        h1 {
+          background: none;
+          color: var(--main--text);
+          font-family: 'Unbounded', sans-serif;
+          font-weight: 600;
+          margin: 20px;
+          font-size: 40px;
+        }
+
+      }
+
+    }
+    }
+
+  }
+
+
+
